@@ -6,6 +6,7 @@ NOTE: If a value submitted to the 'add2' function is a float, it must be done so
 in quotes (i.e. as a string).
 '''
 
+
 # If 'value' is not an integer, convert it to a float and failing that, a string.
 def conv(value):
     try:
@@ -16,6 +17,7 @@ def conv(value):
         except ValueError:
             return str(value)
 
+
 # The 'add2' function itself
 def add2(arg1, arg2):
     # Convert 'arg1' and 'arg2' to their appropriate types
@@ -25,4 +27,5 @@ def add2(arg1, arg2):
     if isinstance(arg1conv, str) or isinstance(arg2conv, str):
         arg1conv = str(arg1conv)
         arg2conv = str(arg2conv)
+
     return arg1conv + arg2conv
